@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ejemplo</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="search">
+            <label for="busqueda"></label>
+            <input class="input-general" type="text" id="busqueda" name="busqueda" placeholder="Ingrese su busqueda">
+        </section>
+        <form class="form-data--container" onsubmit="agregarFila(); return false;">
+            <input class="input-general data-text" type="text" id="campo1" name="campo1" placeholder="Producto"
+                required>
+            <input class="input-general data-text" type="text" id="campo2" name="campo2" placeholder="Proovedor"
+                required>
+            <input class="input-general data-text" type="text" id="campo3" name="campo3" placeholder="Precio Compra"
+                required>
+            <input class="input-general data-text" type="text" id="campo4" name="campo4" placeholder="Precio Venta"
+                required>
+            <label class="send-button" for="send-data">
+                <span class="material-icons-outlined">
+                    send
+                    <input id="send-data" type="submit" value="">
+                </span>
+
+            </label>
+
+        </form>
+
+
+    </header>
+    <main>
+
+        <table class="suppliers-table" id="tabla">
+            <thead class="suppliers-table--head">
+                <tr>
+                    <th><span class="material-icons-outlined">
+
+                        </span></th>
+                    <th>Columna 1</th>
+                    <th>Columna 2</th>
+                    <th>Columna 3</th>
+                    <th>Columna 4</th>
+                </tr>
+            </thead>
+            <tbody class="suppliers-table--body" id="tabla-body">
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                    <td>Dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Otro dato 1</td>
+                    <td>Otro dato 2</td>
+                    <td>Otro dato 3</td>
+                    <td>Otro dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                    <td>Dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Otro dato 1</td>
+                    <td>Otro dato 2</td>
+                    <td>Otro dato 3</td>
+                    <td>Otro dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                    <td>Dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Otro dato 1</td>
+                    <td>Otro dato 2</td>
+                    <td>Otro dato 3</td>
+                    <td>Otro dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                    <td>Dato 4</td>
+                </tr>
+                <tr>
+                    <td><span class="material-icons-outlined">
+                            edit
+                        </span></td>
+                    <td>Otro dato 1</td>
+                    <td>Otro dato 2</td>
+                    <td>Otro dato 3</td>
+                    <td>Otro dato 4</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <aside class="container--product-detail">
+        <div class="product-detail">
+            <section class="product-detail--close">
+                <span class="material-icons-outlined">
+                    close
+                </span>
+            </section>
+            <section class="product-detail--info">
+                <div>Producto</div>
+                <div>Proovedor</div>
+                <div>Precio</div>
+                <div>Precio</div>
+            </section>
+            <section class="product-detail--tools">
+                <span class="material-icons-outlined">
+                    save
+                </span>
+                <span class="material-icons-outlined">
+                    delete
+                </span>
+            </section>
+
+        </div>
+    </aside>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

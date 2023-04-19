@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+
+:root {
+  /* light theme */
+  --white: #fffbfe;
+  --marron: #7d5260;
+  --rosa-suave: #ffd8e4;
+  --ciruela: #31111d;
+  /* dark theme */
+  --rosa-strong: #efb8c8;
+  /* rosa suave
+    marron*/
+  --purple-dark: #492532;
+  /* standar colors */
+  --lavanda-palido: #cac4d0;
+  --gris: #938f99;
+  --gris-oscuro: #49454f;
+  --lavanda: #e7e0ec;
+  --shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+.input-general {
+  margin: 8px auto;
+  height: 40px;
+  padding: 8px 24px;
+  background-color: var(--lavanda);
+  border-radius: 28px;
+  color: black;
+  border: 0;
+  outline: none;
+}
+.input-general::placeholder {
+  color: var(--marron);
+}
+.input-general:hover {
+  border: 1px solid var(--ciruela);
+}
+.input-general:focus {
+  border: 2px solid var(--ciruela);
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
+}
+header {
+  width: 100vw;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid var(--gris);
+}
+.search {
+  max-width: 900px;
+  height: 56px;
+}
+.search input {
+  background-color: var(--lavanda-palido);
+}
+.form-data--container {
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-data--container .data-text {
+  width: 40%;
+}
+.form-data--container .send-button {
+  background-color: var(--rosa-suave);
+  color: var(--ciruela);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 16px;
+}
+.send-button:hover {
+  border: 1px solid var(--ciruela);
+}
+.form-data--container .send-button input {
+  display: none;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+main .suppliers-table {
+  max-width: 900px;
+  width: 100%;
+  margin-top: 10px;
+  color: var(--ciruela);
+}
+.suppliers-table tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50px;
+  margin: 5px;
+}
+.suppliers-table th,
+td {
+  padding: 10px;
+}
+
+.suppliers-table--head th:nth-child(1) {
+  width: 6%;
+  background-color: #00000000;
+}
+.suppliers-table--head th {
+  width: 22%;
+  background-color: var(--marron);
+  border-radius: 28px;
+}
+.suppliers-table--body {
+  display: flex;
+  flex-direction: column;
+}
+.suppliers-table--body td:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  aspect-ratio: 1 / 1;
+}
+.suppliers-table--body td:nth-child(1):hover {
+  border: 1px solid;
+}
+.suppliers-table--body td {
+  width: 22%;
+  border-radius: 28px;
+}
+.suppliers-table--body tr:nth-child(odd) td {
+  background-color: var(--lavanda);
+}
+.suppliers-table--body tr:nth-child(even) td {
+  background-color: var(--rosa-suave);
+}
+.container--product-detail{
+  display: none;
+}
+aside .product-detail {
+  position: absolute;
+  top: calc(50% - 175px);
+  left: calc(50% - 25%);
+  background-color: var(--lavanda);
+  border: 1px solid var(--gris);
+  width: 50%;
+  height: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+}
+.product-detail--close {
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.product-detail--close span {
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+  padding: 8px;
+  background-color: var(--lavanda);
+  filter: var(--shadow);
+  border-radius: 16px;
+}
+.product-detail--info {
+  height: 238px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-detail--info div {
+  width: calc(100% - 32px);
+  height: 40px;
+  background-color: var(--lavanda-palido);
+  border-radius: 20px;
+  padding: 8px;
+  text-align: center;
+}
+.product-detail--tools {
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around
+}
+.product-detail--tools span {
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+  padding: 8px;
+  background-color: var(--lavanda);
+  filter: var(--shadow);
+  border-radius: 16px;
+}
+@media (max-width: 500px) {
+  
+}
