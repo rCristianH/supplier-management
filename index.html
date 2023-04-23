@@ -19,7 +19,7 @@
         <form class="form-data--container" onsubmit="agregarFila(); return false;">
             <input class="input-general data-text" type="text" id="campo1" name="campo1" placeholder="Producto"
                 required>
-            <input class="input-general data-text" type="text" id="campo2" name="campo2" placeholder="Proovedor"
+            <input class="input-general data-text" type="text" id="campo2" name="campo2" placeholder="Proveedor"
                 required>
             <input class="input-general data-text" type="text" id="campo3" name="campo3" placeholder="Precio Compra"
                 required>
@@ -45,15 +45,15 @@
                     <th><span class="material-icons-outlined">
 
                         </span></th>
-                    <th>Columna 1</th>
-                    <th>Columna 2</th>
-                    <th>Columna 3</th>
-                    <th>Columna 4</th>
+                    <th>Producto</th>
+                    <th>Proveedor</th>
+                    <th>Precio Neto</th>
+                    <th>Precio Venta</th>
                 </tr>
             </thead>
             <tbody class="suppliers-table--body" id="tabla-body">
                 <tr>
-                    <td><span class="material-icons-outlined">
+                    <td ><span class="material-icons-outlined button-show-product-container">
                             edit
                         </span></td>
                     <td>Dato 1</td>
@@ -127,16 +127,16 @@
             </tbody>
         </table>
     </main>
-    <aside class="container--product-detail">
+    <aside class="container--product-detail inactive">
         <div class="product-detail">
             <section class="product-detail--close">
-                <span class="material-icons-outlined">
+                <span class="material-icons-outlined icon-product-detail--close">
                     close
                 </span>
             </section>
             <section class="product-detail--info">
                 <div>Producto</div>
-                <div>Proovedor</div>
+                <div>Proveedor</div>
                 <div>Precio</div>
                 <div>Precio</div>
             </section>

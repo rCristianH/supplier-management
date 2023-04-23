@@ -23,6 +23,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.inactive{
+  display: none;
+}
 .material-icons-outlined {
   font-family: "Material Icons";
   font-size: 24px; /* Preferred icon size */
@@ -33,6 +36,7 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  user-select: none;
 }
 .input-general {
   margin: 8px auto;
@@ -112,7 +116,6 @@ main .suppliers-table {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 50px;
   margin: 5px;
 }
 .suppliers-table th,
@@ -127,6 +130,7 @@ td {
 .suppliers-table--head th {
   width: 22%;
   background-color: var(--marron);
+  color: var(--white);
   border-radius: 28px;
 }
 .suppliers-table--body {
@@ -151,9 +155,6 @@ td {
 }
 .suppliers-table--body tr:nth-child(even) td {
   background-color: var(--rosa-suave);
-}
-.container--product-detail{
-  display: none;
 }
 aside .product-detail {
   position: absolute;
@@ -217,5 +218,10 @@ aside .product-detail {
   border-radius: 16px;
 }
 @media (max-width: 500px) {
-  
+  .suppliers-table tr td:nth-child(4), td:nth-child(5),th:nth-child(4), th:nth-child(5){
+    display: none;
+  }
+  .suppliers-table tr td:nth-child(2), td:nth-child(3),th:nth-child(2), th:nth-child(3){
+    width: 44%;
+  }
 }

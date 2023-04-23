@@ -1,29 +1,34 @@
+/* Funciones de apoyo */
 /* Funcion de apoyo que limpia los campos de entrada */
-function limpiarCampo(i){
-  var inputActive = document.querySelector(i)
+function limpiarCampo(i) {
+  let inputActive = document.querySelector(i);
   inputActive.value = "";
 }
-/*Evita que se recarge la pagina*/
-document.getElementById("formulariodb").addEventListener("submit", function(event) {
-  event.preventDefault();
-  agregarFila();
-});
+/* Oculta aside */
+function asideClosed(){
+  const asideContainerClosed = document.querySelector(".container--product-detail")
+  asideContainerClosed.classList.toggle("inactive")
+}
+
+
+document.querySelector(".button-show-product-container").addEventListener("click", asideClosed)
+document.querySelector(".icon-product-detail--close").addEventListener("click", asideClosed)
 
 
 function agregarFila() {
   // Obtener valores de entrada del formulario
-  var campo1 = document.getElementById("campo1").value;
-  var campo2 = document.getElementById("campo2").value;
-  var campo3 = document.getElementById("campo3").value;
-  var campo4 = document.getElementById("campo4").value;
-  var spanElement = '<span class="material-icons-outlined">edit</span>'
-  
+  const campo1 = document.getElementById("campo1").value;
+  const campo2 = document.getElementById("campo2").value;
+  const campo3 = document.getElementById("campo3").value;
+  const campo4 = document.getElementById("campo4").value;
+  const spanElement = '<span class="material-icons-outlined">edit</span>';
+
   // Crear una nueva fila en la tabla
-  var tabla = document.getElementById("tabla");
-  var nuevaFila = tabla.insertRow(-1);
+  let tabla = document.getElementById("tabla");
+  let nuevaFila = tabla.insertRow(-1);
 
   // Agregar celdas con los valores de entrada
-  var celda0 = nuevaFila.insertCell(0)
+  var celda0 = nuevaFila.insertCell(0);
   celda0.innerHTML = spanElement;
 
   var celda1 = nuevaFila.insertCell(1);
@@ -37,30 +42,29 @@ function agregarFila() {
 
   var celda4 = nuevaFila.insertCell(4);
   celda4.innerHTML = campo4;
-  limpiarCampo("#campo1")
-  limpiarCampo("#campo2")
-  limpiarCampo("#campo3")
-  limpiarCampo("#campo4")
-  ordenarTabla()
+  limpiarCampo("#campo1");
+  limpiarCampo("#campo2");
+  limpiarCampo("#campo3");
+  limpiarCampo("#campo4");
+  ordenarTabla();
 }
 function ordenarTabla() {
-  var tabla = document.getElementById("tabla"); 
-  let tablaBody = document.querySelector("#tabla-body")
+  const tabla = document.getElementById("tabla");
+  const tablaBody = document.querySelector("#tabla-body");
 
-  var filas = tabla.rows;
+  const filas = tabla.rows;
 
-
-  var arregloFilas = [];
+  let arregloFilas = [];
 
   // Convierte las filas en un arreglo para poder ordenarlas
-  for (var i = 1; i < filas.length; i++) {
+  for (let i = 1; i < filas.length; i++) {
     arregloFilas.push(filas[i]);
   }
 
   // Ordena las filas por el contenido de la primera celda
   arregloFilas.sort(function (a, b) {
-    var aTexto = a.cells[1].textContent.toLowerCase();
-    var bTexto = b.cells[1].textContent.toLowerCase();
+    let aTexto = a.cells[1].textContent.toLowerCase();
+    let bTexto = b.cells[1].textContent.toLowerCase();
     return aTexto.localeCompare(bTexto);
   });
 
@@ -70,17 +74,17 @@ function ordenarTabla() {
   }
 }
 function buscarEnTabla() {
-  var input = document.getElementById("busqueda");
-  var filtro = input.value.toLowerCase();
-  var tabla = document.getElementById("tabla");
-  var filas = tabla.rows;
+  let input = document.getElementById("busqueda");
+  let filtro = input.value.toLowerCase();
+  let tabla = document.getElementById("tabla");
+  let filas = tabla.rows;
 
-  for (var i = 1; i < filas.length; i++) {
-    var mostrarFila = false;
-    var celdas = filas[i].cells;
+  for (let i = 1; i < filas.length; i++) {
+    let mostrarFila = false;
+    let celdas = filas[i].cells;
 
-    for (var j = 0; j < celdas.length; j++) {
-      var celda = celdas[j];
+    for (let j = 0; j < celdas.length; j++) {
+      let celda = celdas[j];
 
       if (celda.textContent.toLowerCase().indexOf(filtro) > -1) {
         mostrarFila = true;
@@ -97,8 +101,8 @@ function buscarEnTabla() {
 }
 
 // Detecta cuándo el usuario ingresa algo en el campo de búsqueda
-var input = document.getElementById("busqueda");
-input.addEventListener("input", buscarEnTabla);
+const searchCamp = document.getElementById("busqueda");
+searchCamp.addEventListener("input", buscarEnTabla);
 /* 
 function sendTableToBackend() {
   // Get the data from the table
